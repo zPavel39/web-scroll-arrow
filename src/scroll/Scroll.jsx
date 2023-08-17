@@ -9,7 +9,6 @@ const Scroll = ({ ...props }) => {
     }, []);
     const handleScroll = () => {
         props.setRange(window.scrollY);
-        console.log("range", window.scrollY);
     };
     const handleClick = () => {
         window.scrollTo({
