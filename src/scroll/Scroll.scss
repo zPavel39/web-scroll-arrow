@@ -1,0 +1,12 @@
+.scroll {
+    //Позиционирование скрола
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    &__img {
+        width: 40px;
+        transform: rotate(90deg);
+        cursor: pointer;
+    }
+}
