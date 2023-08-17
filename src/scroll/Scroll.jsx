@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Arrow from "./../arrow.svg";
 import './Scroll.scss';
 
-const Scroll = ({ ...props }) => {
+const Scroll = () => {
+
+    const [range, setRange] = useState();
+
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     const handleScroll = () => {
-        props.setRange(window.scrollY);
+        setRange(window.scrollY);
     };
     const handleClick = () => {
         window.scrollTo({
@@ -19,7 +22,7 @@ const Scroll = ({ ...props }) => {
     }
     return (
         <div className='scroll' onClick={handleClick}>
-            {props.range > 100 && <img className="scroll__img" src={Arrow} />}
+            {range > 100 && <img className="scroll__img" src={Arrow} />}
         </div>
     )
 }

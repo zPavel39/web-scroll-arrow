@@ -3,10 +3,9 @@ import "./App.scss";
 import Scroll from "./scroll/Scroll";
 
 function App() {
-  const [range, setRange] = useState();
   return (
     <div className="App">
-      <Scroll setRange={setRange} range={range} />
+      <Scroll />
     </div>
   );
 }
